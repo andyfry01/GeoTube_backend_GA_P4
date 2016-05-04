@@ -6,4 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Video.create!({title: 'Test video', description: 'This is a video for testing', thumbnail: 'https://i.ytimg.com/vi/4ua64HbsBUo/hqdefault.jpg', link: '4ua64HbsBUo', date: '2014-05-21T12:00:46.000Z', live: false})
+Video.create!([{videoId: '8S0FDjFBj8o', title: 'How to sound smart in your TEDx Talk | Will Stephen | TEDxNewYork'}, {videoId: 'Fkfz2bJh6Kw', title: 'How "Dude Perfect" Pulls Off Epic Trick Shots | Nightline | ABC News'}, {videoId: 'CtolHpkkPIA', title: 'From the record-breaking tweet to the pizza delivery, Ellen won for best Oscar host.'}])

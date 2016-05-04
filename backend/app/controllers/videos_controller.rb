@@ -10,7 +10,7 @@ class VideosController < ApplicationController
   end
 
   def create
-    @video = Video.new( title: params[:title], description: params[:description], thumbnail: params[:thumbnail], link: params[:link], date: params[:date], live: params[:live] )
+    @video = Video.new( videoId: params[:videoId], title: params[:title] )
     if @video.save
       render 'show', formats: [:json], handlers: [:jbuilder], status: 201
     else
@@ -20,7 +20,7 @@ class VideosController < ApplicationController
 
   # Unsure if we'll actually need an update route for anything, leaving it here for now.
   # def update
-  #   if @video.update_attributes( title: params[:title], description: params[:description], thumbnail: params[:thumbnail], link: params[:link], date: params[:date] live: params[:live] )
+  #   if @video.update_attributes( videoId: params[:videoId], title: params[:title] )
   #     render 'show', formats: [:json], handlers: [:jbuilder], status: 200
   #   else
   #     render json: {error: "Error when updating video DB entry"}, status: 500
